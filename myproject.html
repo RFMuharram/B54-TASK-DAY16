@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyProject</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div>
+        <img
+          src="./assets/logo-brand.png"
+          alt="logo-brand"
+          class="logo-brand"
+        />
+      </div>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./myproject.html">MyProject</a></li>
+        <li><a href="./backpage.html">Contact Me</a></li>
+      </ul>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- PROJECT FORM-->
+    <div class="header">
+      <h1 class="title">Add My Project</h1>
+    </div>
+
+    <form>
+      <div>
+        <label for="title">Project Name</label>
+        <input type="text" id="title" />
+      </div>
+
+      <div class="flex">
+        <div class="startdate">
+          <label for="startdate">Start Date</label>
+          <input type="date" id="startdate" />
+        </div>
+        <div class="enddate">
+          <label for="enddate">End Date</label>
+          <input type="date" id="enddate" />
+        </div>
+      </div>
+
+      <div>
+        <label for="description">Description</label>
+        <textarea id="description"></textarea>
+      </div>
+      <label for="technologies">Technologies</label>
+      <div class="technologies" id="technologies">
+        <div class="checkbox">
+          <input class="tech" type="checkbox" id="nodejs" />
+          <label for="nodejs">Node Js</label><br />
+          <input class="tech" type="checkbox" id="react" />
+          <label for="react">React Js</label><br />
+        </div>
+        <div class="checkbox">
+          <input class="tech" type="checkbox" id="nextjs" />
+          <label for="nextjs">Next Js</label><br />
+          <input class="tech" type="checkbox" id="typescript" />
+          <label for="typescript">Typescript</label><br />
+        </div>
+      </div>
+      <div>
+        <label for="image">Upload Image</label>
+        <input class="image" type="file" id="input-image" />
+        <button class="submit" type="button" onclick="addProject(event)">
+          Submit
+        </button>
+      </div>
+    </form>
+    <!-- PROJECT FORM -->
+
+    <!-- PROJECT'S -->
+    <div class="content">
+      <div>
+        <h1 class="title">My Project</h1>
+      </div>
+      <div class="bottom">
+        <div class="mobile">
+          <div class="card">
+            <a href="./project.html"
+              ><img class="logo" src="assets/fotocontent.jpg" alt="dumbways"
+            /></a>
+            <h2 class="title-content">MOBILE APP 2024</h2>
+            <p class="duration">Duration 3 month</p>
+            <p>
+              App that used for dumbways student.it was deployed and can
+              download on IOS & Android.
+            </p>
+            <div>
+              <img class="image" src="./assets/appstore.png" alt="playstore" />
+              <img class="image" src="./assets/androidlogo.png" alt="android" />
+              <img class="image" src="./assets/javalogo.png" alt="java" />
+            </div>
+            <div>
+              <button class="edit" id="editbutton">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile">
+          <div class="card">
+            <a href="./project.html"
+              ><img class="logo" src="./assets/fotocontent3.jpg" alt="dumbways"
+            /></a>
+            <h2 class="title-content">MOBILE APP 2024</h2>
+            <p class="duration">Duration 3 month</p>
+            <p>
+              App that used for dumbways student.it was deployed and can
+              download on IOS & Android.
+            </p>
+            <div>
+              <img class="image" src="./assets/appstore.png" alt="playstore" />
+              <img class="image" src="./assets/androidlogo.png" alt="android" />
+              <img class="image" src="./assets/javalogo.png" alt="java" />
+            </div>
+            <div>
+              <button class="edit" id="editbutton">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile">
+          <div class="card">
+            <a href="./project.html"
+              ><img class="logo" src="./assets/fotocontent3.jpg" alt="dumbways"
+            /></a>
+            <h2 class="title-content">MOBILE APP 2024</h2>
+            <p class="duration">Duration 3 month</p>
+            <p>
+              App that used for dumbways student.it was deployed and can
+              download on IOS & Android.
+            </p>
+            <div>
+              <img class="image" src="./assets/appstore.png" alt="playstore" />
+              <img class="image" src="./assets/androidlogo.png" alt="android" />
+              <img class="image" src="./assets/javalogo.png" alt="java" />
+            </div>
+            <div>
+              <button class="edit" id="editbutton">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile">
+          <div class="card">
+            <a href="./project.html"
+              ><img class="logo" src="./assets/fotocontent.jpg" alt="dumbways"
+            /></a>
+            <h2 class="title-content">MOBILE APP 2024</h2>
+            <p class="duration">Duration 3 month</p>
+            <p>
+              App that used for dumbways student.it was deployed and can
+              download on IOS & Android.
+            </p>
+            <div>
+              <img class="image" src="./assets/appstore.png" alt="playstore" />
+              <img class="image" src="./assets/androidlogo.png" alt="android" />
+              <img class="image" src="./assets/javalogo.png" alt="java" />
+            </div>
+            <div>
+              <button class="edit" id="editbutton">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="div-3">
+          <div class="card">
+            <a href="./project.html"
+              ><img class="logo" src="./assets/fotocontent3.jpg" alt="dumbways"
+            /></a>
+            <h2 class="title-content">MOBILE APP 2024</h2>
+            <p class="duration">Duration 3 month</p>
+            <p>
+              App that used for dumbways student.it was deployed and can
+              download on IOS & Android.
+            </p>
+            <div>
+              <img class="image" src="./assets/appstore.png" alt="playstore" />
+              <img class="image" src="./assets/androidlogo.png" alt="android" />
+              <img class="image" src="./assets/javalogo.png" alt="java" />
+            </div>
+            <div>
+              <button class="edit" id="editbutton">edit</button>
+              <button class="delete">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECT'S -->
+    <script src="./JS/project.js"></script>
+  </body>
+</html>

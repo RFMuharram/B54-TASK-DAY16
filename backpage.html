@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hit Me UP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div>
+        <img
+          src="./assets/logo-brand.png"
+          alt="logo-brand"
+          class="logo-brand"
+        />
+      </div>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./myproject.html">MyProject</a></li>
+        <li><a href="./backpage.html">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTACT FORM -->
+    <div class="header">
+      <h1 class="title">Get in Touch</h1>
+    </div>
+
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" />
+      </div>
+
+      <div>
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option>Choose</option>
+          <option>Offrering</option>
+          <option>Gathering</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
+      </div>
+      <div>
+        <button type="button" onclick="submitHandler()">Submit</button>
+      </div>
+    </form>
+    <script src="./JS/contact.js"></script>
+    <!-- CONTACT FORM -->
+  </body>
+</html>
