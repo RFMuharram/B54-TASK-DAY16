@@ -9,7 +9,8 @@ function addProject(event) {
     let description = document.getElementById("description").value;
     let checkbox = document.getElementById("technologies").value;
     let image = document.getElementById("input-image").files[0];
-    // let imageURL = URL.createObjectURL(image)
+    // let imageURL = URL.createObjectURL(image);
+    
 
 
     if (title === "") {
@@ -22,7 +23,7 @@ function addProject(event) {
         return alert("PLEASE ENTERED THE DESCRIPTION!!")
     } else if (checkbox === "") {
         return alert("PLEASE CHOOSE YOUR TECHNOLOGIES!!")
-    } else if (image=== "") {
+    } else if (imageURL=== "") {
         return alert("PLEASE UPLOAD YOUR IMAGE!!")
     }
 
