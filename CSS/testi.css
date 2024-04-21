@@ -1,0 +1,101 @@
+.testimoni-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+.title{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 70px;
+    color: bisque;
+    font-family: copperplate;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: bisque;
+    font-family: copperplate;
+}
+#cup-icon{
+    color: #7b3535;
+}
+
+  .rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .cupbutton{
+    margin: 20px;
+    padding: 0px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: bisque;
+    border-radius: 10px;
+    border: solid;
+    box-shadow: 2px 2px 20px black;
+    color: #7b3535;
+    cursor: pointer;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.testi-card {
+    width: 25%;
+    margin: 0px 15px 30px 15px;
+    padding: 20px;
+    background-color: #7b3535;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px black;
+}
+
+.testi-card img{
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.comment {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: copperplate;
+    color: bisque;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: copperplate;
+    color: bisque;
+}
+
+.profilpic-testi {
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .testi-card {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .testi-card {
+        width: 100%;
+    }
+}

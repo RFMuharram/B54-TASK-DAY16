@@ -23,13 +23,13 @@ function addProject(event) {
         return alert("PLEASE ENTERED THE DESCRIPTION!!")
     } else if (checkbox === "") {
         return alert("PLEASE CHOOSE YOUR TECHNOLOGIES!!")
-    } else if (imageURL=== "") {
+    } else if (image=== "") {
         return alert("PLEASE UPLOAD YOUR IMAGE!!")
     }
 
 
     if (enddate < startdate) {
-        return alert("E R O R !!! PLEASE CHECK AGAIN YOUR START DATE AND END DATE!!!!")
+        return alert("E R R O R !!! PLEASE CHECK AGAIN YOUR START DATE AND END DATE!!!!")
     }
 
     let startDatePart = startdate.split("/")

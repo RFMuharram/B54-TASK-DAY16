@@ -1,0 +1,67 @@
+/* BIG CONTENT */
+
+.title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: xx-large;
+  color: bisque;
+  font-family: copperplate;
+}
+
+.upper-content {
+  padding: 50px;
+  display: flex;
+}
+
+.upper-left {
+  width: 60%;
+}
+.upper-foto {
+  width: 100%;
+}
+
+.upper-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  margin-left: 70px;
+  color: #7b3535;
+}
+
+.title-duration {
+  color: bisque;
+  font-family: copperplate;
+}
+.main1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.main2 {
+  margin-top: 20px;
+}
+
+.satu-2,
+.satu-3 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.dua-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+.lower-content {
+  padding: 50px;
+  text-align: justify;
+  color: bisque;
+  font-size: large;
+  font-family: copperplate;
+  word-spacing: 5px;
+}
+
+/* BIG CONTENT */

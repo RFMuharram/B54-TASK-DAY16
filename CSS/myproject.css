@@ -1,0 +1,202 @@
+/* PROJECT FORM */
+.title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: xx-large;
+  color: bisque;
+  font-family: copperplate;
+}
+
+.header {
+  width: 100%;
+}
+
+form {
+  width: 350px;
+  margin: 50px auto;
+}
+
+form div {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+  color: #e5b579;
+}
+
+input {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #7b3535;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px black;
+  resize: none;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  border: 1px solid #7b3535;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px black;
+  resize: none;
+}
+
+form div button {
+  background-color: #e5b579;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #7b3535;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.startdate,
+.enddate {
+  width: 80%;
+}
+
+.startdate {
+  margin-right: 20px;
+}
+.enddate {
+  margin-left: 20px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.tech {
+  width: auto;
+  margin-top: 0;
+  height: auto;
+}
+
+.checkbox label {
+  font-size: 15px;
+  color: bisque;
+  font-family: monospace;
+}
+/* PROJECT FORM */
+
+/* PROJECT'S */
+
+.content {
+  /* width: 100%; */
+  background-color: rgb(95, 29, 29);
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 350px;
+  height: 450px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 10px;
+  background-color: bisque;
+}
+
+.title-content {
+  color: #7b3535;
+  font-family: copperplate;
+}
+
+.logo {
+  width: 100%;
+}
+
+.duration {
+  color: rgb(102, 101, 101);
+}
+
+.image {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.edit,
+.delete {
+  padding: 10px 60px;
+  color: #7b3535;
+  background-color: #e5b579;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#editbutton {
+  margin-right: 30px;
+}
+
+.web {
+  width: 300px;
+}
+
+.description {
+  text-align: justify;
+}
+
+/* PROJECT'S */
+
+@media only screen and (max-width: 400px) {
+  .startdate {
+    margin-right: 10px;
+  }
+  .enddate {
+    margin-left: 10px;
+  }
+
+  .startdate,
+  .enddate {
+    width: 40%;
+  }
+  .card {
+    width: 70%;
+  }
+  form {
+    margin: 50px 0px;
+  }
+  .image {
+    margin: 0px;
+  }
+
+  .mobile {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

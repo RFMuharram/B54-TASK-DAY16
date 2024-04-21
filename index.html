@@ -11,7 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="stylesheet" href="./CSS/home.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -24,11 +25,21 @@
         />
       </div>
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html" class="active">Home</a></li>
         <li><a href="./myproject.html">MyProject</a></li>
+        <li><a href="./testi.html">Testimonials</a></li>
         <li><a href="./backpage.html">Contact Me</a></li>
       </ul>
+      <button id="hamburger-trigger" onclick="toggleHamburger()">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </button>
     </nav>
+    <div class="hamburger-nav hide">
+      <a href="./index.html" class="active">Home</a>
+      <a href="./myproject.html">MyProject</a>
+      <a href="./testi.html">Testimonials</a>
+      <a href="./backpage.html">Contact Me</a>
+    </div>
     <!-- NAVBAR -->
 
     <!-- CARD -->
@@ -67,5 +78,6 @@
       </div>
     </div>
     <!-- CARD -->
+    <script src="./JS/hamburger.js"></script>
   </body>
 </html>
