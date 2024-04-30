@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What They Said</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyWEB</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -11,36 +17,101 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./CSS/main.css"/>
-    <link rel="stylesheet" href="./CSS/testi.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./CSS/testi.css"/>
+
+    <style>
+      body {
+        background-color: #8d6e63;
+      }
+      .nav-link {
+        color: #7b3535;
+        font-family: copperplate;
+      }
+      .nav-link:hover {
+        color: #e5b579;
+      }
+      .active {
+        color: orange !important;
+      }
+      .btn.btn-success {
+        color: bisque;
+        background-color: #7b3535;
+        border-color: #7b3535;
+      }
+      .btn.btn-success:active {
+        color: #7b3535;
+        background-color: bisque;
+        border-color: #7b3535;
+      }
+      #btn-edit:hover {
+        color: #e5b579 !important;
+      }
+      #btn-delete:hover {
+        color: red !important;
+      }
+
+     
+    </style>
+  </head>
+  <body>
      <!-- NAVBAR -->
-     <nav>
-        <div>
-          <img
-            src="./assets/logo-brand.png"
-            alt="logo-brand"
-            class="logo-brand"
-          />
-        </div>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./myproject.html">MyProject</a></li>
-          <li><a href="./testi.html" class="active">Testimonials</a></li>
-          <li><a href="./backpage.html">Contact Me</a></li>
-        </ul>
-        <button id="hamburger-trigger" onclick="toggleHamburger()">
-          <i class="fa-solid fa-bars fa-2x"></i>
-        </button>
-      </nav>
-      <div class="hamburger-nav hide">
-        <a href="./index.html">Home</a>
-        <a href="./myproject.html">MyProject</a>
-        <a href="./testi.html" class="active">Testimonials</a>
-        <a href="./backpage.html">Contact Me</a>
-      </div>
-      <!-- NAVBAR -->
+     <nav
+     class="navbar navbar-expand-lg bg-body-tertiary"
+     style="background-color: bisque !important"
+   >
+     <div class="container-fluid">
+       <a href="./indexBootstrap.html"><img
+         src="./assets/logo-brand.png"
+         alt="logo-brand"
+         class="logo-brand"
+         style="margin-right: 10px"
+       /></a>
+       <button
+         class="navbar-toggler"
+         type="button"
+         data-bs-toggle="collapse"
+         data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent"
+         aria-expanded="false"
+         aria-label="Toggle navigation"
+         style="background-color: #7b3535"
+       >
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+             <a
+               class="nav-link "
+               aria-current="page"
+               href="./indexBootstrap.html"
+               >Home</a
+             >
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="./addProjectBootstrap.html"
+               >Add project
+             </a>
+           </li>
+
+           <li class="nav-item">
+             <a class="nav-link active" href="./testi.html">Testimonials</a>
+           </li>
+         </ul>
+         <form class="d-flex" role="search">
+           <button class="btn btn-success" type="submit">
+             <a
+               class="nav-link"
+               href="./backpageBootstrap.html"
+               style="color: bisque"
+               >Contact Me</a
+             >
+           </button>
+         </form>
+       </div>
+     </div>
+   </nav>
+   <!-- NAVBAR -->
 
       <!-- TESTIMONI AND RATING -->
       <div class="testimoni-container">
@@ -68,11 +139,15 @@
               </button>
           </div>
       </div>
-
+<!-- TESTIMONI AND RATING -->
         <section class="testimonial" id="testimonial">
          
         </section>
 <script src="./JS/asyncTesti.js"></script>
-<script src="./JS/hamburger.js"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"
+></script>
 </body>
 </html>

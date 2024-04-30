@@ -65,7 +65,7 @@
         </div>
 
         <div>
-          <label>Description</label>
+          <label for="description">Description</label>
           <textarea id="description"></textarea>
         </div>
         <label>Technologies</label>
@@ -84,9 +84,11 @@
           </div>
         </div>
         <div>
-          <label>Upload Image</label>
+          <label for="input-image">Upload Image</label>
           <input type="file" id="input-image" />
-          <button class="submit" type="button" onclick="addProject(event)">
+          <!-- dibuat div beda antara submit button dan upload image, liat video day 10 1:43 menit -->
+          <!-- bisa juga buat ulang -->
+          <button type="button" onsubmit="addBlog(event)">
             Submit
           </button>
         </div>
@@ -123,7 +125,7 @@
           </div>
         </div>
 
-        <div class="mobile">
+        <!-- <div class="mobile">
           <div class="card">
             <a href="./project.html"
               ><img class="logo" src="./assets/fotocontent3.jpg" alt="dumbways"
@@ -167,7 +169,7 @@
               <button class="delete">delete</button>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="mobile">
           <div class="card">

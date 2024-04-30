@@ -1,18 +1,15 @@
-var dataProject = [];
+let dataProject = [];
 
-function addProject(event) {
+function addBlog(event) {
     event.preventDefault();
 
-    let title = document.getElementById("title").value;
-    let startdate = document.getElementById("startdate").value;
-    let enddate = document.getElementById("enddate").value;
-    let description = document.getElementById("description").value;
-    let checkbox = document.getElementById("technologies").value;
-    let image = document.getElementById("input-image").files[0];
-    // let imageURL = URL.createObjectURL(image);
-    
-
-
+    const title = document.getElementById("title").value;
+    const startdate = document.getElementById("startdate").value;
+    const enddate = document.getElementById("enddate").value;
+    const description = document.getElementById("description").value;
+    const checkbox = document.getElementById("technologies").value;
+    const imageInput = document.getElementById("input-image");
+   
     if (title === "") {
         return alert("PLEASE ENTERED YOUR TITLE!!")
     } else if (startdate === "") {
@@ -23,7 +20,7 @@ function addProject(event) {
         return alert("PLEASE ENTERED THE DESCRIPTION!!")
     } else if (checkbox === "") {
         return alert("PLEASE CHOOSE YOUR TECHNOLOGIES!!")
-    } else if (image=== "") {
+    } else if (!imageInput.files || imageInput.files.length === 0) {
         return alert("PLEASE UPLOAD YOUR IMAGE!!")
     }
 
@@ -31,6 +28,9 @@ function addProject(event) {
     if (enddate < startdate) {
         return alert("E R R O R !!! PLEASE CHECK AGAIN YOUR START DATE AND END DATE!!!!")
     }
+
+    const image = URL.createObjectURL(imageInput.files[0]);
+
 
     let startDatePart = startdate.split("/")
     let endDatePart = enddate.split("/")
@@ -79,32 +79,52 @@ function newData() {
 
 
         document.getElementById("div-3").innerHTML += `
-    <div id="div-3">
-     <div class="card">
-        <a href="./project.html"><img class="logo" src="${project.image}" alt="dumbways"></a>
-            <h2>${project.title}</h2>
-            <p class="duration"> Duration : ${project.duration}</p>
-            <p>${project.description}</p>
-            <div>
-            <img
-            class="image"
-            src="./assets/appstore.png"
-            alt="playstore"
-          />
-          <img
-            class="image"
-            src="./assets/androidlogo.png"
-            alt="android"
-          />
-          <img class="image" src="./assets/javalogo.png" alt="java" />
-            </div>
-            <div>
-                <button class="edit" id="editbutton">edit</button>
-                <button class="delete">delete</button>
-            </div>
-     </div>
-     </div
-    
+        <div
+        class="card d-flex flex-row my-5 mx-auto w-75 border-0"
+        style="
+          background-color: #7b3535;
+          border-radius: 10px;
+          box-shadow: 2px 2px 20px black;
+        "
+        id="div-3"
+      >
+        <img
+          src="${project.image}"
+          class="card-img-top w-50"
+          alt="content photo"
+          style="border-top-left-radius: 10px; border-top-right-radius: 0px; border-bottom-left-radius: 10px"
+        />
+        <div class="card-body">
+          <h5
+            class="card-title text-center h3 fw-bold"
+            style="color: bisque; font-family: copperplate"
+          >
+          ${project.title}
+          </h5>
+          <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
+            <small>${project.duration}</small>
+          </p>
+          <p class="card-text text-justify" style="color: bisque">
+          ${project.description}
+          </p>
+          <div class="w-100 d-flex justify-content-evenly">
+            <a
+              href="#"
+              class="btn btn-primary mx-2 w-100 border-0"
+              style="background-color: #8d6e63; color: bisque"
+              id="btn-edit"
+              >Edit</a
+            >
+            <a
+              href="#"
+              class="btn btn-warning w-100"
+              style="color: #7b3535"
+              id="btn-delete"
+              >Delete</a
+            >
+          </div>
+        </div>
+      </div>
     `
     }
 
