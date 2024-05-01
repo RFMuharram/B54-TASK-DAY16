@@ -73,9 +73,9 @@
       style="background-color: bisque !important"
     >
       <div class="container-fluid">
-        <a href="./index.html"
+        <a href="./index"
           ><img
-            src="./assets/logo-brand.png"
+            src="../assets/img/logo-brand.png"
             alt="logo-brand"
             class="logo-brand"
             style="margin-right: 10px"
@@ -98,25 +98,25 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="./index.html"
+                href="./index"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./addProjectBootstrap.html"
+              <a class="nav-link" href="./addProjectBootstrap"
                 >Add project
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./testi.html">Testimonials</a>
+              <a class="nav-link" href="./testi">Testimonials</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
                 class="nav-link"
-                href="./backpageBootstrap.html"
+                href="./backpageBootstrap"
                 style="color: bisque"
                 >Contact Me</a
               >
@@ -165,7 +165,7 @@
           "
         >
           <a
-            href="./backpageBootstrap.html"
+            href="./backpageBootstrap"
             class="text-decoration-none"
             style="color: #7b3535"
             >Contact Me</a
@@ -205,7 +205,7 @@
         id="content-left"
       >
         <img
-          src="./assets/profile.jpeg"
+          src="../assets/img/profile.jpeg"
           class="w-100 mx-auto"
           alt="ini foto"
           style="border-top-left-radius: 25px; border-top-right-radius: 25px"
@@ -229,13 +229,13 @@
         class="title text-center"
         style="color: bisque; font-family: copperplate"
       >
-        Project's
+        Projects
       </h1>
     </div>
     <div
       class="d-flex justify-content-evenly flex-row w-100 mx-auto"
       id="wrapper"
-    >
+    >{{#each data1}}
       <div
         class="card mx-auto my-3 border-0"
         style="
@@ -244,9 +244,9 @@
           border-radius: 10px;
           box-shadow: 2px 2px 20px black;
         "
-      >
+       >
         <img
-          src="./assets/fotocontent.jpg"
+          src="{{image}}"
           class="card-img-top"
           alt="content photo"
           style="border-top-left-radius: 10px; border-top-right-radius: 10px"
@@ -256,14 +256,13 @@
             class="card-title text-center h3 fw-bold"
             style="color: bisque; font-family: copperplate"
           >
-            MOBILE APP 2022
+            {{tittle}}
           </h5>
-          <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
+          {{!-- <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
             <small>19 APRIL 2022 | MOON</small>
-          </p>
+          </p> --}}
           <p class="card-text text-justify" style="color: bisque">
-            App that used for dumbways student.it was deployed and can download
-            on IOS & Android.
+            {{content}}
           </p>
           <div class="w-100 d-flex justify-content-evenly">
             <a
@@ -283,99 +282,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="card mx-auto my-3 border-0"
-        style="
-          width: 350px;
-          background-color: #7b3535;
-          border-radius: 10px;
-          box-shadow: 2px 2px 20px black;
-        "
-      >
-        <img
-          src="./assets/fotocontent3.jpg"
-          class="card-img-top"
-          alt="content photo"
-          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
-        />
-        <div class="card-body">
-          <h5
-            class="card-title text-center h3 fw-bold"
-            style="color: bisque; font-family: copperplate"
-          >
-            MOBILE APP 2023
-          </h5>
-          <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
-            <small>22 SEPTEMBER 2023 | STARS</small>
-          </p>
-          <p class="card-text text-justify" style="color: bisque">
-            App that used for dumbways student.it was deployed and can download
-            on IOS & Android.
-          </p>
-          <div class="w-100 d-flex justify-content-evenly">
-            <a
-              href="#"
-              class="btn btn-primary mx-2 w-100 border-0"
-              style="background-color: #8d6e63; color: bisque"
-              id="btn-edit"
-              >Edit</a
-            >
-            <a
-              href="#"
-              class="btn btn-warning w-100"
-              style="color: #7b3535"
-              id="btn-delete"
-              >Delete</a
-            >
-          </div>
-        </div>
-      </div>
-      <div
-        class="card mx-auto my-3 border-0"
-        style="
-          width: 350px;
-          background-color: #7b3535;
-          border-radius: 10px;
-          box-shadow: 2px 2px 20px black;
-        "
-      >
-        <img
-          src="./assets/fotocontent.jpg"
-          class="card-img-top"
-          alt="content photo"
-          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
-        />
-        <div class="card-body">
-          <h5
-            class="card-title text-center h3 fw-bold"
-            style="color: bisque; font-family: copperplate"
-          >
-            MOBILE APP 2024
-          </h5>
-          <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
-            <small>7 FEBRUARI 2024 | AURORA</small>
-          </p>
-          <p class="card-text text-justify" style="color: bisque">
-            App that used for dumbways student.it was deployed and can download
-            on IOS & Android.
-          </p>
-          <div class="w-100 d-flex justify-content-evenly">
-            <a
-              href="#"
-              class="btn btn-primary mx-2 w-100 border-0"
-              style="background-color: #8d6e63; color: bisque"
-              id="btn-edit"
-              >Edit</a
-            >
-            <a
-              href="#"
-              class="btn btn-warning w-100"
-              style="color: #7b3535"
-              id="btn-delete"
-              >Delete</a
-            >
-          </div>
-        </div>
+      {{/each}}
       </div>
     </div>
     <!-- PROJECT'S -->

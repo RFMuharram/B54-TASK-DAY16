@@ -59,9 +59,9 @@
       style="background-color: bisque !important"
     >
       <div class="container-fluid">
-        <a href="./index.html"
+        <a href="./index"
           ><img
-            src="./assets/logo-brand.png"
+            src="../assets/img/logo-brand.png"
             alt="logo-brand"
             class="logo-brand"
             style="margin-right: 10px"
@@ -84,25 +84,25 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="./index.html"
+                href="./index"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./addProjectBootstrap.html"
+              <a class="nav-link active" href="./addProjectBootstrap"
                 >Add project
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./testi.html">Testimonials</a>
+              <a class="nav-link" href="./testi">Testimonials</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
                 class="nav-link"
-                href="./backpageBootstrap.html"
+                href="./backpageBootstrap"
                 style="color: bisque"
                 >Contact Me</a
               >
@@ -121,8 +121,8 @@
         Add Project
       </h1>
     </div>
-    <form
-      onsubmit="addBlog(event)"
+    <form method="post" action="/addProjectBootstrap"
+      {{!-- onsubmit="addBlog(event)" --}}
       class="mx-auto flex-column"
       style="width: 350px"
     >
@@ -136,6 +136,7 @@
             background-color: bisque !important;
             box-shadow: 2px 2px 5px black;
           "
+          name="tittle"
         />
         <label for="title" style="font-family: copperplate; color: #e5b579"
           >Project Name</label
@@ -152,6 +153,7 @@
           "
           placeholder="Leave a comment here"
           id="description"
+          name="content"
         ></textarea>
         <label
           for="description"
@@ -304,9 +306,58 @@
     <!-- PROJECT FORM -->
     <hr class="line" />
     <div class="container justify-content-center">
-      <div id="div-3"></div>
+      <div id="div-3">
+        {{#each data}}
+        <div
+        class="card d-flex flex-row my-5 mx-auto w-75 border-0"
+        style="
+          background-color: #7b3535;
+          border-radius: 10px;
+          box-shadow: 2px 2px 20px black;
+        "
+        id="div-3"
+       >
+        <img
+          src="{{image}}"
+          class="card-img-top w-50"
+          alt="content photo"
+          style="border-top-left-radius: 10px; border-top-right-radius: 0px; border-bottom-left-radius: 10px"
+        />
+        <div class="card-body">
+          <h5
+            class="card-title text-center h3 fw-bold"
+            style="color: bisque; font-family: copperplate"
+          >
+          {{tittle}}
+          </h5>
+          {{!-- <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
+            <small>${project.duration}</small>
+          </p> --}}
+          <p class="card-text text-justify" style="color: bisque">
+          {{content}}
+          </p>
+          <div class="w-100 d-flex justify-content-evenly">
+            <a
+              href="#"
+              class="btn btn-primary mx-2 w-100 border-0"
+              style="background-color: #8d6e63; color: bisque"
+              id="btn-edit"
+              >Edit</a
+            >
+            <a
+              href="#"
+              class="btn btn-warning w-100"
+              style="color: #7b3535"
+              id="btn-delete"
+              >Delete</a
+            >
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      </div>
     </div>
-    <script src="./JS/project.js"></script>
+    {{!-- <script src="../assets/JS/project.js"></script> --}}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
