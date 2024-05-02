@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 1905
+const port = 1904
 const path = require ("path")
 
 app.set('view engine', 'hbs');
@@ -11,6 +11,9 @@ app.use(express.urlencoded({extended:false}))
 // rute
 app.get("/", home)
 app.get("/index", home)
+app.post("/edited", editedBlog)
+app.post("/delete-post/:id", deletePost)
+app.get("/blog-Edit/:id", blogEdit)
 app.get("/addProjectBootstrap", project)
 app.post("/addProjectBootstrap", addProject)
 app.get("/testi", testi)
@@ -20,37 +23,41 @@ const data = []
 
 // control
 function home(req,res) {
-    const data1 = [
-        {   tittle :"MOBILE APP 2022",
-            content :"App that used for dumbways student.it was deployed and can download on IOS & Android",
-            image : "https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=600"
-        },
-        {
-            tittle :"MOBILE APP 2023",
-            content :"App that used for dumbways student.it was deployed and can download on IOS & Android",
-            image :"https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=600"
-        },
-        {
-            tittle :"MOBILE APP 2024",
-            content :"App that used for dumbways student.it was deployed and can download on IOS & Android",
-            image :"https://images.pexels.com/photos/631477/pexels-photo-631477.jpeg?auto=compress&cs=tinysrgb&w=600"
-        },
-
-    ]
-    res.render("index", {data1 : data1})  
+    res.render("index", {data : data})  
 }
 function project(req,res) {
-    res.render("addProjectBootstrap", {data : data})  
+    res.render("addProjectBootstrap")  
+}
+function deletePost(req,res) {
+    const {id} = req.params; 
+    data.splice(id,1)
+    
+    res.redirect("/")
+}
+function blogEdit(req,res) {
+    const {id} = req.params;
+
+    const selectedData = data[id];
+    selectedData.id = id
+
+    res.render("blog-Edit", {data : selectedData})  
+}
+function editedBlog(req,res) {
+    const {tittle, content, id} = req.body
+    
+    data[id] = {
+        tittle,
+        content 
+    }
+    res.redirect("/")
 }
 function addProject(req,res) {
     const {tittle, content} = req.body
-    console.log("Tittle content: ", tittle)
-    console.log("Content: ", content)
-    data.push({
+    data.unshift({
         tittle,
         content,
     });
-    res.redirect("/addProjectBootstrap")
+    res.redirect("/")
 }
 function testi(req,res) {
     res.render("testi")  

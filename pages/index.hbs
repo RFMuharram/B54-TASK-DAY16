@@ -36,6 +36,11 @@
         background-color: #7b3535;
         border-color: #7b3535;
       }
+      .btn.btn-success:hover {
+        color: #7b3535 !important;
+        background-color: #8d6e63 !important;
+        border-color: #7b3535;
+      }
       .btn.btn-success:active {
         color: #7b3535;
         background-color: bisque;
@@ -224,66 +229,70 @@
     <!-- CARD -->
     <hr class="line" />
     <!-- PROJECT'S -->
-    <div class="header w-100 mt-5 mb-0">
+     <div class="header w-100 mt-5 mb-5">
       <h1
-        class="title text-center"
-        style="color: bisque; font-family: copperplate"
-      >
-        Projects
-      </h1>
-    </div>
-    <div
-      class="d-flex justify-content-evenly flex-row w-100 mx-auto"
+        class="title text-center "
+        style="color: bisque; font-family: copperplate; letter-spacing: 15px;"
+      >PROJECTS</h1>
+     </div>
+     <div
+      class="d-flex justify-content-evenly flex-column w-100 mx-auto my-5"
       id="wrapper"
-    >{{#each data1}}
-      <div
-        class="card mx-auto my-3 border-0"
+     > 
+     <div id="div-3">
+        {{#each data}}
+        <div
+        class="card d-flex flex-row my-5 mx-auto w-75 border-0"
         style="
-          width: 350px;
           background-color: #7b3535;
           border-radius: 10px;
           box-shadow: 2px 2px 20px black;
         "
+        id="div-3"
        >
         <img
           src="{{image}}"
-          class="card-img-top"
+          class="card-img-top w-50"
           alt="content photo"
-          style="border-top-left-radius: 10px; border-top-right-radius: 10px"
+          style="border-top-left-radius: 10px; border-top-right-radius: 0px; border-bottom-left-radius: 10px"
         />
         <div class="card-body">
           <h5
             class="card-title text-center h3 fw-bold"
             style="color: bisque; font-family: copperplate"
           >
-            {{tittle}}
+          {{tittle}}
           </h5>
           {{!-- <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
-            <small>19 APRIL 2022 | MOON</small>
+            <small>${project.duration}</small>
           </p> --}}
           <p class="card-text text-justify" style="color: bisque">
-            {{content}}
+          {{content}}
           </p>
           <div class="w-100 d-flex justify-content-evenly">
             <a
-              href="#"
+              href="/blog-Edit/{{@index}}"
               class="btn btn-primary mx-2 w-100 border-0"
               style="background-color: #8d6e63; color: bisque"
               id="btn-edit"
               >Edit</a
             >
-            <a
-              href="#"
-              class="btn btn-warning w-100"
+            <form method="post" action="/delete-post/{{@index}}" class="w-100">
+            <button class="btn btn-warning w-100"
               style="color: #7b3535"
-              id="btn-delete"
-              >Delete</a
-            >
+              id="btn-delete">
+              Delete</button>
+            </form>
           </div>
         </div>
       </div>
       {{/each}}
       </div>
+      <div class="d-flex justify-content-center w-100 mx-auto"> 
+      <a href="./addProjectBootstrap"
+              class="btn btn-success"
+              style="color: bisque; font-family: copperplate;">Add New Project</a>
+    </div>
     </div>
     <!-- PROJECT'S -->
     <script

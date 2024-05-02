@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Add project</title>
+    <title>Editing</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -64,7 +64,7 @@
       style="background-color: bisque !important"
     >
       <div class="container-fluid">
-        <a href="./index"
+        <a href="/"
           ><img
             src="../assets/img/logo-brand.png"
             alt="logo-brand"
@@ -89,25 +89,25 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="./index"
+                href="/index"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./addProjectBootstrap"
+              <a class="nav-link" href="/addProjectBootstrap"
                 >Add project
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./testi">Testimonials</a>
+              <a class="nav-link" href="/testi">Testimonials</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
                 class="nav-link"
-                href="./backpageBootstrap"
+                href="/backpageBootstrap"
                 style="color: bisque"
                 >Contact Me</a
               >
@@ -123,14 +123,15 @@
         class="title text-center"
         style="color: bisque; font-family: copperplate"
       >
-        Add Project
+        Edit Your Project
       </h1>
     </div>
-    <form method="post" action="/addProjectBootstrap"
+    <form method="post" action="/edited"
       {{!-- onsubmit="addBlog(event)" --}}
       class="mx-auto flex-column"
       style="width: 350px"
-    >
+    > 
+    <input value="{{data.id}}" name="id" hidden/>
       <div class="form-floating mb-3 mt-3">
         <input
           type="text"
@@ -142,6 +143,7 @@
             box-shadow: 2px 2px 5px black;
           "
           name="tittle"
+          value="{{data.tittle}}"
         />
         <label for="title" style="font-family: copperplate; color: #e5b579"
           >Project Name</label
@@ -159,7 +161,7 @@
           placeholder="Leave a comment here"
           id="description"
           name="content"
-        ></textarea>
+        >{{data.content}}</textarea>
         <label
           for="description"
           style="font-family: copperplate; color: #e5b579"
@@ -304,16 +306,11 @@
             border-color: #7b3535 !important;
           "
         >
-          Submit
+          Edit
         </button>
       </div>
     </form>
     <!-- PROJECT FORM -->
-    <div class="container justify-content-center">
-      <div id="div-3">
-      </div>
-    </div>
-    {{!-- <script src="../assets/JS/project.js"></script> --}}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
