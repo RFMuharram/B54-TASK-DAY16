@@ -69,6 +69,16 @@
           margin-bottom: 30px !important;
         }
       }
+      @media only screen and (max-width: 700px){
+        #div-3{
+          flex-direction: column !important;
+        }
+         #photo_content{
+          width: 100% !important;
+          border-bottom-left-radius: 0 !important;
+          border-top-right-radius: 10px !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -255,29 +265,28 @@
           class="card-img-top w-50"
           alt="content photo"
           style="border-top-left-radius: 10px; border-top-right-radius: 0px; border-bottom-left-radius: 10px"
+          id="photo_content"
         />
         <div class="card-body">
-          <h5
-            class="card-title text-center h3 fw-bold"
-            style="color: bisque; font-family: copperplate"
-          >
+          <a href="/project/{{id}}" class="card-title text-center h3 fw-bold"
+            style="color: bisque; font-family: copperplate;"> 
           {{tittle}}
-          </h5>
-          {{!-- <p class="card-text text-center h6 fw-light" style="color: #d4d4d4">
-            <small>${project.duration}</small>
-          </p> --}}
+         </a>
+          <p class="card-text text-center h6 fw-light" style="color: #AAB1B6">
+            <h5>{{data.createdAt}}</h5>
+          </p>
           <p class="card-text text-justify" style="color: bisque">
           {{content}}
           </p>
           <div class="w-100 d-flex justify-content-evenly">
             <a
-              href="/blog-Edit/{{@index}}"
+              href="/blog-Edit/{{id}}"
               class="btn btn-primary mx-2 w-100 border-0"
               style="background-color: #8d6e63; color: bisque"
               id="btn-edit"
               >Edit</a
             >
-            <form method="post" action="/delete-post/{{@index}}" class="w-100">
+            <form method="post" action="/delete-post/{{id}}" class="w-100">
             <button class="btn btn-warning w-100"
               style="color: #7b3535"
               id="btn-delete">
