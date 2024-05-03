@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 1904
 const path = require ("path")
+const config = require("./config/config.json")
+const {Sequelize, QueryTypes} = require("sequelize")
+const sequelize = new Sequelize(config.development)
 
 app.set('view engine', 'hbs');
 app.set("views", path.join(__dirname, "./pages"))
@@ -22,7 +25,9 @@ app.get("/backpageBootstrap", contact)
 const data = []
 
 // control
-function home(req,res) {
+async function home(req,res) {
+    const query ="SELECT * FROM tb_blogs";
+    const data = await sequelize.query(query, { type: QueryTypes.SELECT });
     res.render("index", {data : data})  
 }
 function project(req,res) {
