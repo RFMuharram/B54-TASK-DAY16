@@ -22,7 +22,7 @@ app.post("/addProjectBootstrap", addProject)
 app.get("/testi", testi)
 app.get("/backpageBootstrap", contact)
 
-const data = []
+// const data = []
 
 // control
 async function home(req,res) {
