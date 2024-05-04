@@ -117,6 +117,7 @@
                 >Home</a
               >
             </li>
+            {{#if loggedIn}}
             <li class="nav-item">
               <a class="nav-link" href="./addProjectBootstrap"
                 >Add project
@@ -126,7 +127,36 @@
             <li class="nav-item">
               <a class="nav-link" href="./testi">Testimonials</a>
             </li>
+            {{/if}}
           </ul>
+          {{#unless loggedIn}}
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="./register"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./login"
+                >Login
+              </a>
+            </li>
+          </ul>
+          {{/unless}}
+          {{#if loggedIn}}
+            <form method="post" action="logOut" class="d-flex mx-1" role="search">
+            <button class="btn btn-warning" type="submit">
+              <a
+                class="nav-link"
+                style=style="color: #7b3535; font-family: copperplate;"
+                >log out</a
+              >
+            </button>
+          </form>
+            {{/if}}
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
@@ -142,6 +172,15 @@
     </nav>
     <!-- NAVBAR -->
     <!-- CARD -->
+    {{#if loggedIn}}
+    <div class="header w-100 mt-5 mb-5">
+      <h1
+        class="title text-center fw-bold"
+        style="color: bisque; font-family: helvatica;"
+      >Hi {{user.name}}, how was your day?
+      </h1>
+    </div>
+    {{/if}}
     <div
       class="d-flex justify-content-between flex-row w-75 bg-primary mx-auto my-5"
       style="
@@ -278,6 +317,7 @@
           <p class="card-text text-justify" style="color: bisque">
           {{content}}
           </p>
+          {{#if loggedIn}}
           <div class="w-100 d-flex justify-content-evenly">
             <a
               href="/blog-Edit/{{id}}"
@@ -293,15 +333,18 @@
               Delete</button>
             </form>
           </div>
+          {{/if}}
         </div>
       </div>
       {{/each}}
       </div>
+      {{#if loggedIn}}
       <div class="d-flex justify-content-center w-100 mx-auto"> 
       <a href="./addProjectBootstrap"
               class="btn btn-success"
               style="color: bisque; font-family: copperplate;">Add New Project</a>
     </div>
+    {{/if}}
     </div>
     <!-- PROJECT'S -->
     <script

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hit Me Up</title>
+    <title>Log In</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -77,29 +77,26 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./addProjectBootstrap"
-                >Add project
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="./testi">Testimonials</a>
-            </li>
           </ul>
-            <form class="d-flex mx-1" role="search">
-            <button class="btn btn-warning" type="submit">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
               <a
                 class="nav-link"
-                style=style="color: #7b3535; font-family: copperplate;"
-                >log out</a
+                aria-current="page"
+                href="./register"
+                >Register</a
               >
-            </button>
-          </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./login"
+                >Login
+              </a>
+            </li>
+          </ul>
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
-                class="nav-link active"
+                class="nav-link"
                 href="./backpageBootstrap"
                 style="color: bisque"
                 >Contact Me</a
@@ -110,37 +107,23 @@
       </div>
     </nav>
     <!-- NAVBAR -->
-    <!-- CONTACT FORM -->
+    <!-- LogIN FORM -->
     <div class="header w-100 mt-5 mb-5">
       <h1
         class="title text-center"
         style="color: bisque; font-family: copperplate"
       >
-        Get In Touch
+        LOGIN
       </h1>
     </div>
-    <form class="mx-auto flex-column" style="width: 350px">
+    <div class="mx-auto flex-column" style="width: 350px">
+    <form method="post" action="/login">
       <div class="form-floating mb-3 mt-3">
         <input
           type="text"
-          class="form-control border-0"
-          id="name"
-          placeholder="Password"
-          style="
-            background-color: bisque !important;
-            box-shadow: 2px 2px 5px black;
-          "
-        />
-        <label for="name" style="font-family: copperplate; color: #e5b579"
-          >Name</label
-        >
-      </div>
-      <div class="form-floating mb-3 mt-3">
-        <input
-          type="text"
+          name="email"
           class="form-control border-0"
           id="email"
-          placeholder="Password"
           style="
             background-color: bisque !important;
             box-shadow: 2px 2px 5px black;
@@ -152,79 +135,30 @@
       </div>
       <div class="form-floating mb-3 mt-3">
         <input
-          type="text"
+          type="password"
+          name="password"
           class="form-control border-0"
-          id="phone"
-          placeholder="Password"
+          id="password"
           style="
             background-color: bisque !important;
             box-shadow: 2px 2px 5px black;
           "
         />
-        <label for="phone" style="font-family: copperplate; color: #e5b579"
-          >Phone Number</label
-        >
-      </div>
-      <div class="input-group mb-3">
-        <label
-          class="input-group-text border-0"
-          for="subject"
-          style="
-            background-color: bisque;
-            box-shadow: 2px 2px 5px black;
-            font-family: copperplate;
-            color: #e5b579;
-          "
-          >Subject</label
-        >
-        <select
-          class="form-select border-0"
-          id="subject"
-          style="
-            color: #7b3535;
-            font-family: copperplate;
-            background-color: bisque !important;
-            box-shadow: 2px 2px 5px black;
-          "
-        >
-          <option selected>Choose...</option>
-          <option value="Gathering">Gathering</option>
-          <option value="Offering">Offering</option>
-        </select>
-      </div>
-      <div class="form-floating mb-3 mt-3">
-        <textarea
-          class="form-control w-100 border-0 rounded"
-          style="
-            background-color: bisque !important;
-            box-shadow: 2px 2px 5px black;
-            resize: none;
-            height: 150px;
-          "
-          placeholder="Leave a comment here"
-          id="message"
-        ></textarea>
-        <label for="message" style="font-family: copperplate; color: #e5b579"
-          >Message</label
+        <label for="password" style="font-family: copperplate; color: #e5b579"
+          >Password</label
         >
       </div>
       <div class="d-flex justify-content-end">
         <button
-          type="button"
-          class="btn btn-primary fw-bold"
-          style="
-            color: #e5b579 !important;
-            background-color: #7b3535 !important;
-            border-color: #7b3535 !important;
-          "
-          onclick="submitHandler()"
+          type="submit"
+          class="btn btn-success"
         >
-          Submit
+          Log In
         </button>
       </div>
     </form>
-    <!-- CONTACT FORM -->
-    <script src="../assets/JS/contact.js"></script>
+    </div>
+    <!-- LogIN FORM -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
