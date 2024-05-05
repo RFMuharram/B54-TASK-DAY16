@@ -103,6 +103,7 @@
                 >Home</a
               >
             </li>
+         {{#if loggedIn}}
             <li class="nav-item">
               <a class="nav-link" href="/addProjectBootstrap"
                 >Add project
@@ -112,8 +113,27 @@
             <li class="nav-item">
               <a class="nav-link" href="/testi">Testimonials</a>
             </li>
+            {{/if}}
           </ul>
-            <form class="d-flex mx-1" role="search">
+          {{#unless loggedIn}}
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/register"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login"
+                >Login
+              </a>
+            </li>
+          </ul>
+          {{/unless}}
+           {{#if loggedIn}}
+            <form method="post" action="/logOut" class="d-flex mx-1" role="search">
             <button class="btn btn-warning" type="submit">
               <a
                 class="nav-link"
@@ -122,6 +142,7 @@
               >
             </button>
           </form>
+            {{/if}}
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a

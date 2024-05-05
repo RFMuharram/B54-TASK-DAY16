@@ -135,12 +135,12 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="./register"
+                href="register"
                 >Register</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./login"
+              <a class="nav-link" href="login"
                 >Login
               </a>
             </li>
@@ -317,23 +317,22 @@
           <p class="card-text text-justify" style="color: bisque">
           {{content}}
           </p>
-          {{#if loggedIn}}
           <div class="w-100 d-flex justify-content-evenly">
+            {{#if ../loggedIn}}
             <a
               href="/blog-Edit/{{id}}"
               class="btn btn-primary mx-2 w-100 border-0"
               style="background-color: #8d6e63; color: bisque"
               id="btn-edit"
-              >Edit</a
-            >
+              >Edit</a>
             <form method="post" action="/delete-post/{{id}}" class="w-100">
             <button class="btn btn-warning w-100"
               style="color: #7b3535"
               id="btn-delete">
               Delete</button>
             </form>
+           {{/if}}
           </div>
-          {{/if}}
         </div>
       </div>
       {{/each}}

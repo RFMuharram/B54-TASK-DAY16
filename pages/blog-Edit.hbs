@@ -102,21 +102,17 @@
               <a class="nav-link" href="/testi">Testimonials</a>
             </li>
           </ul>
-          {{!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+        {{#if loggedIn}}
+            <form method="post" action="/logOut" class="d-flex mx-1" role="search">
+            <button class="btn btn-warning" type="submit">
               <a
                 class="nav-link"
-                aria-current="page"
-                href="./register"
-                >Register</a
+                style=style="color: #7b3535; font-family: copperplate;"
+                >log out</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./login"
-                >Login
-              </a>
-            </li>
-          </ul> --}}
+            </button>
+          </form>
+            {{/if}}
           <form class="d-flex" role="search">
             <button class="btn btn-success" type="submit">
               <a
@@ -214,85 +210,7 @@
           />
         </div>
       </div>
-      <p
-        style="
-          font-family: copperplate;
-          color: #e5b579;
-          margin-bottom: 0 !important;
-        "
-      >
-        Technologies
-      </p>
-      <div class="mb-2 form-check d-flex flex-row justify-content-between">
-        <div class="d-flex" id="technologies">
-          <input
-            type="checkbox"
-            class="form-check-input border-0"
-            id="technologies1"
-            style="
-              background-color: #e5b579 !important;
-              box-shadow: 2px 2px 5px black;
-            "
-          />
-          <label
-            class="form-check-label"
-            for="technologies1"
-            style="font-family: copperplate; color: bisque"
-            >Next Js</label
-          >
-        </div>
-        <div class="d-flex">
-          <input
-            type="checkbox"
-            class="form-check-input border-0"
-            id="technologies2"
-            style="
-              background-color: #e5b579 !important;
-              box-shadow: 2px 2px 5px black;
-            "
-          />
-          <label
-            class="form-check-label"
-            for="technologies2"
-            style="font-family: copperplate; color: bisque"
-            >Node Js</label
-          >
-        </div>
-        <div class="d-flex">
-          <input
-            type="checkbox"
-            class="form-check-input border-0"
-            id="technologies3"
-            style="
-              background-color: #e5b579 !important;
-              box-shadow: 2px 2px 5px black;
-            "
-          />
-          <label
-            class="form-check-label"
-            for="technologies3"
-            style="font-family: copperplate; color: bisque"
-            >React Js</label
-          >
-        </div>
-        <div class="d-flex">
-          <input
-            type="checkbox"
-            class="form-check-input border-0"
-            id="technologies4"
-            style="
-              background-color: #e5b579 !important;
-              box-shadow: 2px 2px 5px black;
-            "
-          />
-          <label
-            class="form-check-label"
-            for="technologies4"
-            style="font-family: copperplate; color: bisque"
-            >Typescript</label
-          >
-        </div>
-      </div>
+     
       <div class="mb-3">
         <label
           for="input-image"
@@ -308,6 +226,7 @@
             background-color: bisque !important;
             box-shadow: 2px 2px 5px black;
           "
+          name="image"
         />
       </div>
       <div class="d-flex justify-content-end">
